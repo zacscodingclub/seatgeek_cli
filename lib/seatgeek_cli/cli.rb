@@ -7,9 +7,11 @@ class SeatgeekCLI::CLI
 
   def call
     puts "Welcome to Seatgeek you geek!"
+    puts "#{external_ip}"
+
   end
 
   def self.get_external_ip
-    `curl https://api.ipify.org`
+    `curl https://api.ipify.org --silent`
   end
 end
